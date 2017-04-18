@@ -5,6 +5,8 @@ def projectProperties = [
 ]
 properties(projectProperties)
 
+currentBuild.result == 'SUCCESS'
+
 parallel check: {
 	stage('Check') {
 		node {
