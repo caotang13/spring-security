@@ -5,7 +5,7 @@ def projectProperties = [
 ]
 properties(projectProperties)
 
-currentBuild.result == 'SUCCESS'
+currentBuild.result = 'SUCCESS'
 println currentBuild.result
 parallel check: {
 	stage('Check') {
