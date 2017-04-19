@@ -13,7 +13,7 @@ parallel check: {
 			println currentBuild.result
 			checkout scm
 			try {
-				sh "./gradlew clean check  --refresh-dependencies --no-daemon"
+				sh "./gradlew clean check  --refresh-dependencies --no-daemon --parallel"
 			} finally {
 				junit '**/build/*-results/*.xml'
 			}
